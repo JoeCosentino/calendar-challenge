@@ -3,10 +3,10 @@
 // 1. WHEN I open the planner
 // THEN the current day is displayed at the top of the calendar
 
-// WHEN I scroll down
+// 2. WHEN I scroll down
 // THEN I am presented with time blocks for standard business hours
 
-// WHEN I view the time blocks for that day
+// 3. WHEN I view the time blocks for that day
 // THEN each time block is color-coded to indicate whether it is in the past, present, or future
 
 // WHEN I click into a time block
@@ -18,18 +18,11 @@
 // WHEN I refresh the page
 // THEN the saved events persist
 
-var headerDivEl = $(".display-3");
 
-var rightNow = moment().format('MMMM Do YYYY, h:mm:ss a');
+var rightNow = moment().format('MMMM Do YYYY');
 console.log(rightNow);
 
-// add rightNow to headerDivEl in its own div
+$("#currentDay").append(rightNow);
 
-var createTimeHeader = function() {
-    var timeDivEl = createElement("div");
-    timeDivEl.textContent(rightNow);
-    timeDivEl.addClass("current-date");
-    headerDivEl.append(timeDivEl);
-};
+// 2. create divs for each time block from 9 - 5. create them as rows with children elements to add the actual tasks too.
 
-createTimeHeader();
