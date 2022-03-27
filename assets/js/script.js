@@ -22,7 +22,18 @@
 var rightNow = moment().format('MMMM Do YYYY');
 console.log(rightNow);
 
+var currentTime = parseInt(moment().format("H"));
+console.log(currentTime);
+
 $("#currentDay").append(rightNow);
 
 // 2. create divs for each time block from 9 - 5. create them as rows with children elements to add the actual tasks too.
+
+// 3. make past, present, and future times a different colour
+
+var timeColour = function(){
+    if(id < currentTime){
+        $(".textBox").addClass("past-time");
+    }
+};
 
