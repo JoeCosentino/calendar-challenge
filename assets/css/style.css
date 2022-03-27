@@ -73,3 +73,11 @@ textarea{
 .past-time {
   background-color: #06AED5;
 }
+
+.current-time {
+  background-color: #77dd77;
+}
+
+.future-time {
+  background-color: #ff6961;
+}

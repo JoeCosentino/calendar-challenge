@@ -23,7 +23,7 @@ var rightNow = moment().format('MMMM Do YYYY');
 console.log(rightNow);
 
 var currentTime = parseInt(moment().format("H"));
-console.log(currentTime);
+    console.log(currentTime);
 
 $("#currentDay").append(rightNow);
 
@@ -33,10 +33,30 @@ $("#currentDay").append(rightNow);
 
 var timeColour = function(){
 
-    var timeNow = parseInt($(this).attr("id"));
+    // var currentTime = parseInt(moment().format("H"));
+    // console.log(currentTime);
 
-        if(timeNow < currentTime){
+    $(".row").each(function() {
+
+        var timeById = parseInt($(this).attr("id"))
+        console.log(timeById);
+
+        if(timeById < currentTime){
             $(".textBox").addClass("past-time");
         }
+        else if(timeById === currentTime) {
+            $(".textBox").addClass("current-time");
+        }
+        else if(timeById > currentTime) {
+            $(".textBox").addClass("future-time");
+        }
+
+    })
+
+        // if(timeById < currentTime){
+        //     $(".textBox").addClass("past-time");
+        // }
 };
+
+timeColour();
 
