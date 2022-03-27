@@ -32,8 +32,11 @@ $("#currentDay").append(rightNow);
 // 3. make past, present, and future times a different colour
 
 var timeColour = function(){
-    if(id < currentTime){
-        $(".textBox").addClass("past-time");
-    }
+
+    var timeNow = parseInt($(this).attr("id"));
+
+        if(timeNow < currentTime){
+            $(".textBox").addClass("past-time");
+        }
 };
 
