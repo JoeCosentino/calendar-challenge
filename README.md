@@ -27,7 +27,7 @@ This is a README file for the Coding Quiz Challenge, completed by Joe Cosentino
 
 ## Screenshot of Assignment
 
-![image](./assets/images/calendar-challenge.lnk)
+![image](./assets/images/calendar-challenge.PNG)
 
 ## Licensing
 
